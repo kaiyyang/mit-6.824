@@ -1,0 +1,23 @@
+FAIL	6.824/raft [build failed]
+// LRU minimum cache size
+// giving an intI] array:[1,2,3,3]
+/ and int k = 1
+// find the min cache size that allow cache hits >= k
+// return min cache size, or -1 if not possible
+// Example 1:
+//
+0123
+// int[1,2,3,3]
+// k = 1
+// return 1 since a cache size of 1 will have 1 hit at query 3
+// Example 2:
+//
+// int[1]
+// k = 1
+I return -1 since there is no way to have a hit
+// Example 3:
+//
+012345
+/l int[1,2,3,1,2,3]
+1= k = 1
+// return 3 since a cache size of 3 will have 3 hits ( > k) at query 3,
