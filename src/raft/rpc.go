@@ -52,7 +52,7 @@ func (reply AppendEntriesReply) String() string {
 	return fmt.Sprintf("{Term:%v,Success:%v}", reply.Term, reply.Success)
 }
 
-type InstallSnapshotRequest struct {
+type InstallSnapshotArgs struct {
 	Term              int
 	LeaderId          int
 	LastIncludedIndex int
@@ -60,14 +60,14 @@ type InstallSnapshotRequest struct {
 	Data              []byte
 }
 
-func (request InstallSnapshotRequest) String() string {
+func (request InstallSnapshotArgs) String() string {
 	return fmt.Sprintf("{Term:%v,LeaderId:%v,LastIncludedIndex:%v,LastIncludedTerm:%v,DataSize:%v}", request.Term, request.LeaderId, request.LastIncludedIndex, request.LastIncludedTerm, len(request.Data))
 }
 
-type InstallSnapshotResponse struct {
+type InstallSnapshotReply struct {
 	Term int
 }
 
-func (response InstallSnapshotResponse) String() string {
+func (response InstallSnapshotReply) String() string {
 	return fmt.Sprintf("{Term:%v}", response.Term)
 }
